@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 get 'top' => 'homes#top'
 #「.../todolists」というURLにpostメソッドでリクエストした時、todolistsコントローラーのcreateアクションが呼び出される
 post 'todolists' => 'todolists#create'
+get 'todolists' => 'todolists#index'
+get 'todolists/:id' => 'todolists#show', as: 'todolist'
 end
 
